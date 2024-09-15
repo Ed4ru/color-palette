@@ -1,0 +1,10 @@
+# build output
+**/dist
+edaru-color-palette-generator-*.tgz
+
+# Node modules
+**/node_modules
+
+# Special mac OS files
+**/.DS_Store
+

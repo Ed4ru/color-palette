@@ -1,0 +1,40 @@
+{
+  "name": "@edaru/color-palette-generator",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "color palette generator",
+  "author": "Arnaud de Cuniac",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "pack": "pnpm run build && pnpm pack",
+    "deploy": "pnpm run lint && pnpm run pack && pnpm publish --access public",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "deps:clear": "rm -rf node_modules pnpm-lock.yaml",
+    "deps:reset": "pnpm deps:clear && pnpm install"
+  },
+  "dependencies": {
+    "chroma-js": "~3.1.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "~3.6.2",
+    "@types/chroma-js": "~2.4.4",
+    "eslint": "~9.11.1",
+    "typescript": "~5.6.2",
+    "unbuild": "~2.0.0"
+  }
+}
