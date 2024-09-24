@@ -1,16 +1,12 @@
 import chromaJs from 'chroma-js'
 
 export function deltaE(color1: string, color2: string): number {
-  const labColor1 = chromaJs(color1).lab()
-  const labColor2 = chromaJs(color2).lab()
+  const lab1 = chromaJs(color1).lab()
+  const lab2 = chromaJs(color2).lab()
 
-  const lightnessDifference = labColor1[0] - labColor2[0]
-  const aAxisDifference = labColor1[1] - labColor2[1]
-  const bAxisDifference = labColor1[2] - labColor2[2]
-
-  return Math.sqrt(
-    lightnessDifference * lightnessDifference
-    + aAxisDifference * aAxisDifference
-    + bAxisDifference * bAxisDifference,
+  return Math.hypot(
+    lab1[0] - lab2[0],
+    lab1[1] - lab2[1],
+    lab1[2] - lab2[2],
   )
 }

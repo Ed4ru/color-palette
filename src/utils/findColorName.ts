@@ -2,14 +2,19 @@ import { htmlColors } from '../assets/colors'
 import { deltaE } from './deltaE'
 
 export function findColorName(targetColor: string): string {
-  const colorMappingsWithDelta = htmlColors.map(mapping => ({
-    ...mapping,
-    delta: deltaE(targetColor, mapping.hex),
-  }))
+  let nearestDelta = Infinity
+  let nearestName = ''
 
-  const nearestColor = colorMappingsWithDelta.reduce((nearest, current) =>
-    current.delta < nearest.delta ? current : nearest,
-  )
+  for (const { name, hex } of htmlColors) {
+    const delta = deltaE(targetColor, hex)
 
-  return nearestColor.name
+    if (delta < nearestDelta) {
+      nearestDelta = delta
+      nearestName = name
+    }
+
+    if (delta === 0)
+      break // exits if perfect match is found
+  }
+  return nearestName
 }
