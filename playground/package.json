@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@edaru/color-palette-generator": "latest",
+    "nuxt": "^3.13.0",
+    "sass": "^1.79.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "~3.6.2",
+    "@nuxt/eslint": "^0.5.7",
+    "@nuxtjs/tailwindcss": "^6.12.1"
+  }
+}
