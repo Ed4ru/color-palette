@@ -5,7 +5,7 @@ export function findColorName(targetColor: string): string {
   let nearestDelta = Infinity
   let nearestName = ''
 
-  for (const { name, hex } of htmlColors) {
+  for (const [name, hex] of htmlColors) {
     const delta = deltaE(targetColor, hex)
 
     if (delta < nearestDelta) {
