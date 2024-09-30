@@ -1,7 +1,7 @@
 {
   "name": "@edaru/color-palette-generator",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "color palette generator",
   "author": "Arnaud de Cuniac",
   "license": "MIT",

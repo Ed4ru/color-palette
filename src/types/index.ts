@@ -1,7 +1,4 @@
-export interface HtmlColor {
-  name: string
-  hex: string
-}
+export type HtmlColor = [string, string]
 
 export interface ColorShade {
   shade: number
