@@ -17,8 +17,8 @@ import { rose } from './rose'
 import { sky } from './sky'
 import { teal } from './teal'
 import { violet } from './violet'
-
 import { yellow } from './yellow'
+
 // grayscale
 import { gray } from './gray'
 import { neutral } from './neutral'
@@ -26,27 +26,27 @@ import { slate } from './slate'
 import { stone } from './stone'
 import { zinc } from './zinc'
 
-export const palettes = [
-  { name: 'amber', shades: amber },
-  { name: 'blue', shades: blue },
-  { name: 'cyan', shades: cyan },
-  { name: 'emerald', shades: emerald },
-  { name: 'fuchsia', shades: fuchsia },
-  { name: 'green', shades: green },
-  { name: 'indigo', shades: indigo },
-  { name: 'lime', shades: lime },
-  { name: 'orange', shades: orange },
-  { name: 'pink', shades: pink },
-  { name: 'purple', shades: purple },
-  { name: 'red', shades: red },
-  { name: 'rose', shades: rose },
-  { name: 'sky', shades: sky },
-  { name: 'teal', shades: teal },
-  { name: 'violet', shades: violet },
-  { name: 'yellow', shades: yellow },
-  { name: 'gray', shades: gray },
-  { name: 'neutral', shades: neutral },
-  { name: 'slate', shades: slate },
-  { name: 'stone', shades: stone },
-  { name: 'zinc', shades: zinc },
-] satisfies ColorPalette[]
+export const palettes: [string, string[]][] = [
+  ['amber', amber],
+  ['blue', blue],
+  ['cyan', cyan],
+  ['emerald', emerald],
+  ['fuchsia', fuchsia],
+  ['green', green],
+  ['indigo', indigo],
+  ['lime', lime],
+  ['orange', orange],
+  ['pink', pink],
+  ['purple', purple],
+  ['red', red],
+  ['rose', rose],
+  ['sky', sky],
+  ['teal', teal],
+  ['violet', violet],
+  ['yellow', yellow],
+  ['gray', gray],
+  ['neutral', neutral],
+  ['slate', slate],
+  ['stone', stone],
+  ['zinc', zinc],
+]
